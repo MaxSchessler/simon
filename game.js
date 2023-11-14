@@ -24,6 +24,3 @@ $("input[type='button']").click((evt) => {
     flash(userChosenColor);
 })
 
-$("#green").click(() => {
-    console.log("clicked");
-})
