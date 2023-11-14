@@ -6,6 +6,7 @@ const getSequence = () => {
     const randomNum = Math.floor(Math.random() * 3);
     const randomChosenColor = buttoncolors[randomNum];
     gamePattern.push(randomChosenColor);
+    flash(randomChosenColor);
 }
 
 const flash = color => {
@@ -20,4 +21,5 @@ const flash = color => {
 $("input[type='button']").click((evt) => {
     const userChosenColor = $(evt.currentTarget).attr("id");
     userClickedPatter.push(userChosenColor);
+    flash(userChosenColor);
 })
