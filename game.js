@@ -23,3 +23,5 @@ $("input[type='button']").click((evt) => {
     userClickedPatter.push(userChosenColor);
     flash(userChosenColor);
 })
+
+console.log("test");
