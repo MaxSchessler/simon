@@ -16,3 +16,8 @@ const flash = color => {
         button.toggleClass("pressed");
     }, 75);
 }
+
+$("input[type='button']").click((evt) => {
+    const userChosenColor = $(evt.currentTarget).attr("id");
+    userClickedPatter.push(userChosenColor);
+})
