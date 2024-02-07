@@ -49,7 +49,7 @@ checkAnswer = (currentLevel) => {
     }
   } else {
     new Audio("sounds/wrong.mp3").play();
-    $("#level-title").text("Game OVer, Press Any Key to Restart");
+    $("#level-title").text("fuck you loser, gg ez");
     $("body").addClass("game-over");
     setTimeout(() => {
       $("body").removeClass("game-over");
