@@ -49,12 +49,17 @@ checkAnswer = (currentLevel) => {
     }
   } else {
     new Audio("sounds/wrong.mp3").play();
-    $("#level-title").text("fuck you loser, gg ez");
+    $("#level-title").text("Game over! Better luck next time.");
     $("body").addClass("game-over");
+
+    // Wait for 5 seconds before redirecting
     setTimeout(() => {
       $("body").removeClass("game-over");
-    }, 2000);
-    startOver();
+
+      // Redirect to the YouTube link after 5 seconds
+      const youtubeUrl = "https://www.youtube.com/watch?v=q-Y0bnx6Ndw&autoplay=1";
+      window.location.href = youtubeUrl;
+    }, 2000); // 5000 milliseconds = 5 seconds
   }
 };
 
