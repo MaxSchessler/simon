@@ -6,6 +6,7 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
+/*
 $(document).keypress(() => {
   if (!started) {
     $("#level-title").text("Level " + level);
@@ -13,8 +14,16 @@ $(document).keypress(() => {
     started = true;
   }
 });
+*/
 
 $(".btn").click((event) => {
+  if (!started) {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
+    return;
+  }
+
   const userChosenColour = $(event.currentTarget).attr("id");
   userClickedPattern.push(userChosenColour);
 
@@ -96,5 +105,4 @@ const winGame = () => {
   startOver();
 
   $("#level-title").text("You win! Press any key to go again.");
-
-}
+};
