@@ -57,7 +57,7 @@ checkAnswer = (currentLevel) => {
       $("body").removeClass("game-over");
 
       // Redirect to the YouTube link after 5 seconds
-      const youtubeUrl = "https://www.youtube.com/watch?v=q-Y0bnx6Ndw&autoplay=1";
+      const youtubeUrl = "https://www.youtube.com/watch?v=5ZlOt5xjd1E&autoplay=1";
       window.location.href = youtubeUrl;
     }, 2000); // 5000 milliseconds = 5 seconds
   }
